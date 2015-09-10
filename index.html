@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="GW2Armory" ng-controller="MainController" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title ng-bind-template="Guild Wars 2 Armory - {{page}}">Guild Wars 2 Armory</title>
+	
+	<!-- Bootstrap -->
+	<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<!-- AngularJS -->
+	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+	<script type="text/javascript" src="bower_components/ngstorage/ngStorage.js"></script>
+	<!-- Cross Domain Support -->
+	<!--
+	<script type="text/javascript" src="bower_components/angular-csrf-cross-domain/dist/angular-csrf-cross-domain.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular-cookies/angular-cookies.min.js"></script>
+	-->
+	<!-- Custom JS files -->
+	<script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+
+	<div class="container">
+		<h1>Guild Wars 2 Armory - {{page}}</h1>
+	</div>
+
+	<div class="container">
+		<div ng-include="'APIKey.html'" ng-show="!APIKey"></div>
+	</div>
+
+	<div class="container">
+		<div ng-include="'accountInfo.html'" ng-show="APIKey"></div>
+	</div>
+
+</body>
+</html>

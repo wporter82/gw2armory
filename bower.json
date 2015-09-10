@@ -1,0 +1,15 @@
+{
+  "name": "angular-gw2armory",
+  "description": "An AngularJS Project to use the Guild Wars 2 API",
+  "version": "0.0.0",
+  "homepage": "",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": ">=1.2.x",
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.1.1",
+    "ngstorage": ">=0.3.9",
+    "angular-route": "~1.4.0"
+  }
+}

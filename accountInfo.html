@@ -1,0 +1,33 @@
+<div>{{error}}</div>
+
+<div><h3>{{account.name}}</h3></div>
+<div>Created on: {{account.created | date}}</div>
+<div>Server: {{world.name}} Population: {{world.population}}</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">Characters</div>
+	<div class="panel-body">
+		<div ng-repeat="character in characters">
+			<a ng-href="character.html?{{character}}">{{character}}</a>
+		</div>		
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">Guilds</div>
+	<div class="panel-body">
+		<div ng-repeat="guild in guilds">
+			{{guild.guild_name}} [{{guild.tag}}]
+		</div>		
+	</div>
+</div>
+
+
+<div class="panel panel-default">
+	<div class="panel-heading">Debug Info</div>
+	<div class="panel-body">
+		<div>API Key:{{APIKey}}</div>
+		<div>Account JSON:{{account}}</div>
+		<div>Guilds:{{guilds}}</div>
+	</div>
+</div>
