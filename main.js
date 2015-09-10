@@ -5,7 +5,6 @@
 		$scope.save = function(key) {
 			$localStorage.APIKey = key;
 		}
-
 		
 	}
 	
@@ -14,7 +13,6 @@
 		var onError = function(response) {
 			console.log(response);
 			$scope.error = "Could not get data. (" + response.data.text + ")";
-			// $scope.error = "Could not get data.";
 		}
 
 		var onAccountComplete = function(response) {
